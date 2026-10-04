@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#b8f2e6">
+  <meta name="description" content="answer Willy - Quiz personal interaktif yang menguji seberapa jauh kamu benar-benar mengenal Willy / Wibian.">
+  <title>answer Willy — How well do you know me?</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+  <!-- Ambient Dreamy Pastel Canvas -->
+  <div class="pastel-background" aria-hidden="true"></div>
+  <div class="doodle-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile-first App Wrapper -->
+  <div id="app-container">
+    <!-- Top Persistent App Header with Gradient Logo -->
+    <header class="app-header">
+      <button type="button" id="btn-audio-toggle" class="audio-toggle-btn" aria-label="Toggle Backsound" title="Toggle Suara">
+        🔊
+      </button>
+      <div class="top-banner-logo">
+        <span class="banner-star" aria-hidden="true">✦</span>
+        <span class="banner-text-answer">answer</span>
+        <span class="banner-text-willy">Willy</span>
+      </div>
+    </header>
+
+    <!-- Dynamic Screen Mount Container -->
+    <main id="view-root" role="main" aria-live="polite">
+      <!-- Injected dynamically via app.js -->
+    </main>
+  </div>
+
+  <!-- Supabase Client Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Scripts: Configuration first, Application logic second -->
+  <script src="quiz-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
